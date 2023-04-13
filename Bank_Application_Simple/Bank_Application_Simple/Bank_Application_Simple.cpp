@@ -8,5 +8,9 @@ using namespace std;
 int main()
 {
 	
+	Account al;
+	al.Deposit(7657, "Joe", 54.0);
+	al.Display();
+
 	return 0;
 }

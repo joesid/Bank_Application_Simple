@@ -14,25 +14,34 @@ class Account
 public:
 	int acct_no;
 	string acct_name;
-	double balance;
+	double balance = 0;
 
 
-	void Deposit(int acct_no, string acct_name, double amount);
-	void Withdraw(int acct_no, string acct_name, double amount);
-	void Display(int acct_no, string acct_name, double amount);
+	void Deposit(int act_no, string nam, double amount);
+	void Withdraw(int act_no, string nam, double amount);
+	void Display();
 };
 
-void Account::Deposit(int acct_no, string acct_name, double amount) {
+void Account::Deposit(int act_no, string nam, double amount) {
 
+	acct_no = act_no;
 	balance += amount;
+    acct_name = nam;
+
 }
 
-void Account::Withdraw(int acct_no, string acct_name, double amount)
+void Account::Withdraw(int act_no, string nam, double amount)
 {
 	balance -= amount;
 }
 
-void Account::Display(int acct_no, string acct_name, double amount) {
+void Account::Display() 
+{
+	cout << "Account Name: " << acct_name << endl;
+	cout << "Account Number: " << acct_no << endl;
+	cout << "Balance: " << balance << endl;
+
+
 }
 
 //Account Class Ends
@@ -49,17 +58,4 @@ class Checking : Account {
 };
 
 
-
-// Bank_Application_Simple.cpp : Defines the entry point for the application.
-//
-
-#include "Bank_Application_Simple.h"
-
-using namespace std;
-
-int main()
-{
-
-	return 0;
-}
 
