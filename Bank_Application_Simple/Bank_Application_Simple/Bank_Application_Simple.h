@@ -22,7 +22,7 @@ public:
 	void Display(int acct_no, string acct_name, double amount);
 };
 
-void Account:: Deposit(int acct_no, string acct_name, double amount) {
+void Account::Deposit(int acct_no, string acct_name, double amount) {
 
 	balance += amount;
 }
@@ -32,7 +32,7 @@ void Account::Withdraw(int acct_no, string acct_name, double amount)
 	balance -= amount;
 }
 
-void Account::Display(int acct_no, string acct_name, double amount){
+void Account::Display(int acct_no, string acct_name, double amount) {
 }
 
 //Account Class Ends
@@ -47,3 +47,19 @@ class Checking : Account {
 
 
 };
+
+
+
+// Bank_Application_Simple.cpp : Defines the entry point for the application.
+//
+
+#include "Bank_Application_Simple.h"
+
+using namespace std;
+
+int main()
+{
+
+	return 0;
+}
+
