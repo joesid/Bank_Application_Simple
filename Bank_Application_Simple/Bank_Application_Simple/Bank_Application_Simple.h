@@ -21,8 +21,13 @@ public:
 	void Withdraw(int act_no, string nam, double amount);
 	void Display();
 	double Transfer(int act_no, string nam, double amount, double balance);
+	double Get_Balance();
 };
 
+double Account:: Get_Balance()
+{
+	return balance;
+}
 
 class Savings :Account {
 
@@ -47,6 +52,9 @@ public:
 
 //Account Class Ends
 
-
+void space()
+{
+	printf(" \n");
+}
 
 

@@ -12,6 +12,45 @@ int main()
 	al.Deposit(7657, "Joe", 54.0);
 	al.Display();
 
+	space();
+	printf("Do you want to transfer funds");
+	space();
+
+	bool ans = 0;
+
+	char in_ans;
+
+	cin >> in_ans;
+
+	if (in_ans == 'y')
+	{    
+		string acct_name;
+		int acct_no = 0;
+		double amount = 0;
+		double balance = 0;
+		space();
+
+
+		printf("Input account name \n");
+		cin >> acct_name;
+
+		space();
+		printf("Input account number \n");
+		cin >> acct_no;
+
+
+		space();
+		printf("Input the amount to be tranferred \n");
+		cin >> amount;
+
+		balance = al.Get_Balance();
+		al.Transfer(acct_no, acct_name, amount, balance); 
+	}
+	else
+	{
+		space();
+		printf("Cancelling Transfer Operation");
+	}
 	return 0;
 }
 
@@ -41,6 +80,8 @@ void Account::Display()
 
 }
 
+
+//Transfer function 
 double Account::Transfer(int act_no, string nam, double amount, double balance)
 {
 	double send_funds = 0;
