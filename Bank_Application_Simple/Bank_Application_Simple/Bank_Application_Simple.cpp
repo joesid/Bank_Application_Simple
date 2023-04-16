@@ -5,10 +5,34 @@
 
 using namespace std;
 
+
+
 int main()
 {
-	
-	Account al;
+
+	char ans = 'n';
+
+	printf("Do you want to create an Account (Y/N)");  s();
+	cin >> ans;
+
+	if (ans == 'y') {
+
+		
+		Create_Account();
+		
+
+	}
+	else if (ans == 'n')
+	{
+		printf("Exiting Application,  Thank You "); s();
+	}
+	else
+	{
+		printf("You entered the wrong input"); s();
+	}
+
+
+	/*  Account al;
 	al.Deposit(7657, "Joe", 54.0);
 	al.Display();
 
@@ -50,9 +74,12 @@ int main()
 	{
 		space();
 		printf("Cancelling Transfer Operation");
-	}
+	}*/
+
+
+
 	return 0;
-}
+} 
 
 void Account::Deposit(int act_no, string nam, double amount) {
 
@@ -96,3 +123,7 @@ double Account::Transfer(int act_no, string nam, double amount, double balance)
 		return printf("Insufficient funds");
 	}
 }
+
+
+
+
