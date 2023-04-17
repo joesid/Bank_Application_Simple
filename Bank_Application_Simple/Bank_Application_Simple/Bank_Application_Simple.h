@@ -8,13 +8,14 @@ using namespace std;
 
 // TODO: Reference additional headers your program requires here.
 
+//Account Class
 class Account
 {
 
 public:
 	int acct_no = 0;
-	string acct_name;
-	double balance = 0;
+	string acct_name;    // Account Name
+	double balance = 0;  //Account Balance
 
 	void Create_acct(int act_no, string nam, double amount);
 	void Deposit(int act_no, string nam, double amount);
@@ -24,13 +25,14 @@ public:
 	double Get_Balance();
 };
 
+//Get Account Balance
 double Account:: Get_Balance()
 {
 	return balance;
 }
 
 class Savings : public Account {
-
+	//Inherits from Account
 	double int_rate = 2.04;
 public:
 	int acct_no = 0;
@@ -41,17 +43,18 @@ public:
 
 void Savings::CalculateInterest()
 {
+	// Savings Function for Calculating interest
 
 }
 
-int Account::Create_acct(int act_no, string nam, double amount)
+void Account::Create_acct(int act_no, string nam, double amount)
 {
-	return 0;
+	
 }
 
 class Checking : Account {
 public:
-	const double min_bal = 20;
+	const double min_bal = 20;   //Minimum Account balance allowed
 
 
 };
@@ -78,6 +81,7 @@ void Create_Account()
 
 	if (ansf == 's')
 	{
+		//Create savings account
 		printf("Creating a Savings Account"); s();
 		printf("Please enter account name "); s();
 		cin >> acct_name;
@@ -89,7 +93,10 @@ void Create_Account()
 		string accttype = "Savings";
 		Savings* obj;
 
-		obj = new Savings->Create_acct(acct_no, acct_name, amount);
+		obj = new Savings;
+
+		obj->Deposit(acct_no, acct_name, amount);
+		obj->Display();
 
 		//obj->Display();
 	}
