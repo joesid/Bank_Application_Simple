@@ -100,8 +100,17 @@ void Create_Account()
 
 		//obj->Display();
 	}
-	else
+	else if(ansf == 'c')
 	{
+		//Create Checkings account
+		printf("Creating a Checkings Account"); s();
+		printf("Please enter account name "); s();
+		cin >> acct_name;
+		printf("Please put in inital Deposit"); s();
+		cin >> amount;
+
+		string accttype = "Checkings";
+		Checking* obj;
 
 	}
 
