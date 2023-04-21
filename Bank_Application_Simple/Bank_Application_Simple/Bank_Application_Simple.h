@@ -52,7 +52,8 @@ void Account::Create_acct(int act_no, string nam, double amount)
 	
 }
 
-class Checking : Account {
+class Checking :public Account {
+
 public:
 	const double min_bal = 20;   //Minimum Account balance allowed
 
@@ -109,8 +110,13 @@ void Create_Account()
 		printf("Please put in inital Deposit"); s();
 		cin >> amount;
 
-		string accttype = "Checkings";
+		string accttype = "Checking";
 		Checking* obj;
+
+		obj = new Checking;
+
+		obj->Deposit(acct_no, acct_name, amount);
+		obj->Display();
 
 	}
 

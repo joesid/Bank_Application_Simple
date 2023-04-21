@@ -32,6 +32,51 @@ int main()
 	}
 
 
+	
+
+	// PERFORM ANOTHER FUNCTION AFTER ACCOUNT CREATION 
+
+	 printf("Do you want to perform another function"); s();
+	char ans = 'n';
+
+	if (ans = 'y')
+	{
+		printf("What task do you want to perform");
+		printf("Withdraw");
+		printf("Deposit");
+		printf("Transfer");
+		printf("Create New Account");
+
+		char ans = 'n';
+
+		switch (ans) {
+		case 'c':
+			Create_Account();
+			break;
+		case 't':
+			Transfer();
+		case 'd':
+			//Call Deposit Function
+			printf("Supossed to call the deposit function");
+			break;
+		case 'w':
+			//Call Withdraw Function
+			printf("Withdrawing");
+			break;
+		default:
+			printf(" you entered the wrong letter");
+			break;
+			//double Account::Transfer(int act_no, string nam, double amount, double balance)
+			
+		}
+
+	} 
+	
+
+
+
+
+	//   INITIAL ACCOUNT CREATION CODE 
 	/*  Account al;
 	al.Deposit(7657, "Joe", 54.0);
 	al.Display();
@@ -89,6 +134,7 @@ void Account::Deposit(int act_no, string nam, double amount) {
 
 }
 
+//Withdraw Function
 void Account::Withdraw(int act_no, string nam, double amount)
 {
 	balance -= amount;
@@ -126,5 +172,32 @@ double Account::Transfer(int act_no, string nam, double amount, double balance)
 }
 
 
+void Transfer()
+{
+	double send_funds = 0;
+	
+	printf("Enter Account you want to tranfer from"); s();
+	string acct_nam;
+	cin >> acct_nam;
+	
+	printf("Enter account number you want to transfer to"); s();
+	int acct_no = 0;
+	cin >> acct_no;
 
+	printf("Enter the amount you want to tranfer ") s();
+	double amount;
+	cin >> amount;
+
+
+	if (balance > amount)
+	{
+		send_funds = balance - amount;
+		 send_funds;
+	}
+	else
+	{
+		 printf("Insufficient funds");
+	}
+	
+}
 
