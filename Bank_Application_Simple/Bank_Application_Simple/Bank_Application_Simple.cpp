@@ -174,6 +174,9 @@ double Account::Transfer(int act_no, string nam, double amount, double balance)
 
 void Transfer()
 {
+
+	 double balance = obj->   //
+
 	double send_funds = 0;
 	
 	printf("Enter Account you want to tranfer from"); s();
@@ -184,10 +187,11 @@ void Transfer()
 	int acct_no = 0;
 	cin >> acct_no;
 
-	printf("Enter the amount you want to tranfer ") s();
+	printf("Enter the amount you want to tranfer "); s();
 	double amount;
 	cin >> amount;
 
+	
 
 	if (balance > amount)
 	{
