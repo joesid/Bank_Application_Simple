@@ -25,11 +25,66 @@ public:
 	double Get_Balance();
 };
 
-//Get Account Balance
+//GET ACCOUNT BALANCE 
 double Account:: Get_Balance()
 {
 	return balance;
 }
+
+
+//CREATE ACCOUNT FUNCTION
+void Account::Create_acct(int act_no, string nam, double amount)
+{
+
+}
+
+
+//DEPOSIT FUNCTION 
+void Account::Deposit(int act_no, string nam, double amount) {
+
+	acct_no = act_no;
+	balance += amount;
+	acct_name = nam;
+
+}
+
+
+//TRANSFER FUNCTION
+double Account::Transfer(int act_no, string nam, double amount, double balance)
+{
+	double send_funds = 0;
+
+	if (balance > amount)
+	{
+		send_funds = balance - amount;
+		return send_funds;
+	}
+	else
+	{
+		return printf("Insufficient funds");
+	}
+}
+
+//WITHDRAW FUNCTION
+void Account::Withdraw(int act_no, string nam, double amount)
+{
+	balance -= amount;
+}
+
+//DISPLAY ACCOUNT DETAILS
+void Account::Display()
+{
+
+	s();
+	cout << "Account Name: " << acct_name << endl;
+	//printf("Account Name: %s\n", acct_name);
+	cout << "Account Number: " << acct_no << endl;
+	cout << "Balance: " << balance << endl;
+
+
+}
+
+
 
 class Savings : public Account {
 	//Inherits from Account
@@ -41,16 +96,14 @@ public:
 	void CalculateInterest();
 };
 
+
 void Savings::CalculateInterest()
 {
 	// Savings Function for Calculating interest
 
 }
 
-void Account::Create_acct(int act_no, string nam, double amount)
-{
-	
-}
+
 
 class Checking :public Account {
 
@@ -61,15 +114,33 @@ public:
 };
 
 
+//END OF ACCOUNT CLASS DECLARATIONS AND FUNCTIONS
 
-//Account Class Ends
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//THIS FUNCTION SIMPLYS ADDS A NEWLINE
 void s()
 {
 	printf(" \n");
 }
 
 
+
+
+//THIS DOES NOT WORK THE WAY IT WAS INTENDED
+/* 
 void Create_Account()
 {
 	printf("What type of Account do you want to create  Savings - s / Checkings - c  (s/c) "); s();
@@ -120,5 +191,5 @@ void Create_Account()
 
 	}
 
-
-}  
+	
+}      */
