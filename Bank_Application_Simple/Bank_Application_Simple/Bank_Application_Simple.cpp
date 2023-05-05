@@ -21,16 +21,15 @@ int main()
 
 		string account_name;
 		cin >> account_name;
+
+		printf("Enter the account type"); s();
 		
 		string name = account_name;
 
 		Account* name;
 		Account Joe;
 
-		Joe->Create 
-		name.
-		
-		
+	
 
 	}
 	else if (ans == 'n')
@@ -149,7 +148,7 @@ int main()
 void Transfer()
 {
 
-	 double balance = obj->   //
+	 
 
 	double send_funds = 0;
 	
