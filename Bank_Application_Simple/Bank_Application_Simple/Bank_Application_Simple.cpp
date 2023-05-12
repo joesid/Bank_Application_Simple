@@ -65,7 +65,7 @@ int main() {
 
 		switch (ans) {
 		case 'c':
-			Create_Acct();
+			myAccount.CreateAccount();
 			break;
 		case 't':
 			Transfer();
@@ -87,56 +87,6 @@ int main() {
 	} 
 	
 
-
-
-
-	//   INITIAL ACCOUNT CREATION CODE 
-	/* Account al;
-	al.Deposit(7657, "Joe", 54.0);
-	al.Display();
-
-	space();
-	printf("Do you want to transfer funds");
-	space();
-
-	bool ans = 0;
-
-	char in_ans;
-
-	cin >> in_ans;
-
-	if (in_ans == 'y')
-	{    
-		string acct_name;
-		int acct_no = 0;
-		double amount = 0;
-		double balance = 0;
-		space();
-
-
-		printf("Input account name \n");
-		cin >> acct_name;
-
-		space();
-		printf("Input account number \n");
-		cin >> acct_no;
-
-
-		space();
-		printf("Input the amount to be tranferred \n");
-		cin >> amount;
-
-		balance = al.Get_Balance();
-		al.Transfer(acct_no, acct_name, amount, balance); 
-	}
-	else
-	{
-		space();
-		printf("Cancelling Transfer Operation");
-	}*/
-
-
-
 	return 0;
 } 
 
@@ -145,41 +95,3 @@ int main() {
 
 
 
-
-
-/*
-
-void Transfer()
-{
-
-	 
-
-	double send_funds = 0;
-	
-	printf("Enter Account you want to tranfer from"); s();
-	string acct_nam;
-	cin >> acct_nam;
-	
-	printf("Enter account number you want to transfer to"); s();
-	int acct_no = 0;
-	cin >> acct_no;
-
-	printf("Enter the amount you want to tranfer "); s();
-	double amount;
-	cin >> amount;
-
-	
-
-	if (balance > amount)
-	{
-		send_funds = balance - amount;
-		 send_funds;
-	}
-	else
-	{
-		 printf("Insufficient funds");
-	}
-	
-}
-
-*/
