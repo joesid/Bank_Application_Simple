@@ -14,10 +14,12 @@ int main() {
 	printf("Do you want to create an Account (Y/N)");  s();
 	cin >> ans;
 
+	Account myAccount;
+
 	if (ans == 'y') 
 	{
 
-		Account myAccount;
+		
 		myAccount.Create_acct();
 
 		/*
@@ -46,10 +48,10 @@ int main() {
 	}
 
 
-	
+	myAccount.Display();
 
 	// PERFORM ANOTHER FUNCTION AFTER ACCOUNT CREATION 
-
+	/*
 	 printf("Do you want to perform another function"); s();
 	char ans = 'n';
 
@@ -84,7 +86,7 @@ int main() {
 			
 		}
 
-	} 
+	} */
 	
 
 	return 0;

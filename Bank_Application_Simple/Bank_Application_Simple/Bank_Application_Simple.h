@@ -85,8 +85,8 @@ void Account::Withdraw(int act_no, string nam, double amount)
 //DISPLAY ACCOUNT DETAILS
 void Account::Display()
 {
+	
 
-	s();
 	cout << "Account Name: " << accountName << endl;
 	//printf("Account Name: %s\n", acct_name);
 	cout << "Account Number: " << accountNumber << endl;
