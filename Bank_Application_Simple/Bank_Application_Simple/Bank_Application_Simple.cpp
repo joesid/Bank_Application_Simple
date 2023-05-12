@@ -7,16 +7,20 @@ using namespace std;
 
 
 
-int main()
-{
+int main() {
 
 	char ans = 'n';
 
 	printf("Do you want to create an Account (Y/N)");  s();
 	cin >> ans;
 
-	if (ans == 'y') {
+	if (ans == 'y') 
+	{
 
+		Account myAccount;
+		myAccount.Create_acct();
+
+		/*
 		printf("Enter the intended account name"); s();
 
 		string account_name;
@@ -29,7 +33,7 @@ int main()
 		Account* name;
 		Account Joe;
 
-	
+	*/
 
 	}
 	else if (ans == 'n')
@@ -61,7 +65,7 @@ int main()
 
 		switch (ans) {
 		case 'c':
-			Create_Account();
+			Create_Acct();
 			break;
 		case 't':
 			Transfer();
@@ -87,7 +91,7 @@ int main()
 
 
 	//   INITIAL ACCOUNT CREATION CODE 
-	/ Account al;
+	/* Account al;
 	al.Deposit(7657, "Joe", 54.0);
 	al.Display();
 
@@ -143,7 +147,7 @@ int main()
 
 
 
-
+/*
 
 void Transfer()
 {
@@ -178,3 +182,4 @@ void Transfer()
 	
 }
 
+*/

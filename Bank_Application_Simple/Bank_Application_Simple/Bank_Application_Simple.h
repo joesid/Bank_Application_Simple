@@ -4,6 +4,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 // TODO: Reference additional headers your program requires here.
@@ -13,45 +14,55 @@ class Account
 {
 
 public:
-	int acct_no = 0;
-	string acct_name;    // Account Name
-	double balance = 0;  //Account Balance
+	int accountNumber = 0;
+	string accountName;
+	double accountBalance = 0.0;
 
-	void Create_acct(int act_no, string nam, double amount);
-	void Deposit(int act_no, string nam, double amount);
+	void Create_acct();
+	void Deposit(double amount);
 	void Withdraw(int act_no, string nam, double amount);
 	void Display();
-	double Transfer(int act_no, string nam, double amount, double balance);
+	double Transfer(double amount);
 	double Get_Balance();
 };
 
 //GET ACCOUNT BALANCE 
 double Account:: Get_Balance()
 {
-	return balance;
+	return accountBalance;
 }
 
 
 //CREATE ACCOUNT FUNCTION
-void Account::Create_acct(int act_no, string nam, double amount)
+void Account::Create_acct()
 {
+	
+	cout << "enter Account Name " << endl;
+	std::cin.ignore(); //ignore the newline character in the input
+	std::getline(std::cin, accountName);
+
+	
+	std::cout << "Enter Account Number " << endl;
+	cin >> accountNumber;
+	
+	std::cout << "Enter Initial Balance: " << endl;
+	std::cin >> accountBalance;
 
 }
 
 
 //DEPOSIT FUNCTION 
-void Account::Deposit(int act_no, string nam, double amount) {
+void Account::Deposit(double amount) {
 
-	acct_no = act_no;
-	balance += amount;
-	acct_name = nam;
+	accountBalance += amount;
 
 }
 
 
 //TRANSFER FUNCTION
-double Account::Transfer(int act_no, string nam, double amount, double balance)
+double Account::Transfer(double amount)
 {
+	double balance  = Get_Balance();
 	double send_funds = 0;
 
 	if (balance > amount)
@@ -68,7 +79,7 @@ double Account::Transfer(int act_no, string nam, double amount, double balance)
 //WITHDRAW FUNCTION
 void Account::Withdraw(int act_no, string nam, double amount)
 {
-	balance -= amount;
+	accountBalance -= amount;
 }
 
 //DISPLAY ACCOUNT DETAILS
@@ -76,10 +87,10 @@ void Account::Display()
 {
 
 	s();
-	cout << "Account Name: " << acct_name << endl;
+	cout << "Account Name: " << accountName << endl;
 	//printf("Account Name: %s\n", acct_name);
-	cout << "Account Number: " << acct_no << endl;
-	cout << "Balance: " << balance << endl;
+	cout << "Account Number: " << accountNumber << endl;
+	cout << "Balance: " << accountBalance << endl;
 
 
 }
