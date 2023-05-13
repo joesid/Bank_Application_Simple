@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include <string>
+#include <map>
+#include <vector>
 using namespace std;
 
 // TODO: Reference additional headers your program requires here.
@@ -14,6 +16,13 @@ class Account
 {
 
 public:
+
+	//Struct used to create databes for an account
+	struct AccountDatabase {
+
+	};
+
+
 	int accountNumber = 0;
 	string accountName;
 	double accountBalance = 0.0;
@@ -103,7 +112,7 @@ class Savings : public Account {
 public:
 	int acct_no = 0;
 	string acct_name;
-	double balance = 0;
+	double balance = 0; 
 	void CalculateInterest();
 };
 
