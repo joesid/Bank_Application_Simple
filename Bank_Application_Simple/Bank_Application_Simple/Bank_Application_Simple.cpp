@@ -14,28 +14,28 @@ int main() {
 	printf("Do you want to create an Account (Y/N)");  s();
 	cin >> ans;
 
-	Account myAccount;
+	int num = 3;
+	string rl = "name";
+	double dnum = 34.3;
+
+	Account Joe(3, rl, dnum);
 
 	if (ans == 'y') 
 	{
+		int acctnum = 0;
+		string accountName;
+		double amount;
 
-		
-		myAccount.Create_acct();
+		cout << "Enter account name: ";
+		cin >> accountName;
 
-		/*
-		printf("Enter the intended account name"); s();
+		cout << "Enter account Number: ";
+		cin >> acctnum;
 
-		string account_name;
-		cin >> account_name;
+		cout << "Enter amount to be paid: ";
+		cin >> amount;
 
-		printf("Enter the account type"); s();
-		
-		string name = account_name;
-
-		Account* name;
-		Account Joe;
-
-	*/
+		Account myAccount(acctnum, accountName, amount);
 
 	}
 	else if (ans == 'n')
@@ -46,48 +46,6 @@ int main() {
 	{
 		printf("You entered the wrong input"); s();
 	}
-
-
-	myAccount.Display();
-
-	// PERFORM ANOTHER FUNCTION AFTER ACCOUNT CREATION 
-	/*
-	 printf("Do you want to perform another function"); s();
-	char ans = 'n';
-
-	if (ans = 'y')
-	{
-		printf("What task do you want to perform");
-		printf("Withdraw");
-		printf("Deposit");
-		printf("Transfer");
-		printf("Create New Account");
-
-		char ans = 'n';
-
-		switch (ans) {
-		case 'c':
-			myAccount.CreateAccount();
-			break;
-		case 't':
-			Transfer();
-		case 'd':
-			//Call Deposit Function
-			printf("Supossed to call the deposit function");
-			break;
-		case 'w':
-			//Call Withdraw Function
-			printf("Withdrawing");
-			break;
-		default:
-			printf(" you entered the wrong letter");
-			break;
-			//double Account::Transfer(int act_no, string nam, double amount, double balance)
-			
-		}
-
-	} */
-	
 
 	return 0;
 } 

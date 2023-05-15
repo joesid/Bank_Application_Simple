@@ -17,15 +17,15 @@ class Account
 
 public:
 
-	//Struct used to create databes for an account
-	struct AccountDatabase {
-
-	};
-
-
 	int accountNumber = 0;
 	string accountName;
 	double accountBalance = 0.0;
+
+	Account(int accountNumber, string accountName, double accountBalance)
+	{
+	
+	}
+
 
 	void Create_acct();
 	void Deposit(double amount);
@@ -94,14 +94,10 @@ void Account::Withdraw(int act_no, string nam, double amount)
 //DISPLAY ACCOUNT DETAILS
 void Account::Display()
 {
-	
-
 	cout << "Account Name: " << accountName << endl;
 	//printf("Account Name: %s\n", acct_name);
 	cout << "Account Number: " << accountNumber << endl;
 	cout << "Balance: " << accountBalance << endl;
-
-
 }
 
 
@@ -129,7 +125,6 @@ class Checking :public Account {
 
 public:
 	const double min_bal = 20;   //Minimum Account balance allowed
-
 
 };
 
